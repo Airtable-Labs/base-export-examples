@@ -3,7 +3,7 @@ import logging, os
 import pandas as pd
 from botocore.exceptions import ClientError
 
-s3 = boto3.client('s3') # 👧🏾 I might need to incorporate Key Management in here
+s3 = boto3.client('s3')
 
 def upload_file(file_name, bucket, object_name=None):
 
