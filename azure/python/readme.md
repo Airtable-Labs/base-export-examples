@@ -11,13 +11,13 @@ The script will export each table in a base as a CSV and save the CSV to a Blob 
 
 To configure this script, input the following variables in your .env file:
 
-##Azure Variables
+### Azure Variables
 - AZURE_STORAGE_CONNECTION_STRING: 
 - ACCOUNT_NAME
 - ACCOUNT_KEY
 - CONTAINER_NAME
 
-##Airtable Variables
+### Airtable Variables
 - AIRTABLE_API_KEY
 - AIRTABLE_BASE_ID
 
