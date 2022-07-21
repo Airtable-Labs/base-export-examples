@@ -12,13 +12,13 @@ TO DO
  - Schema Check and Resolution for Table Updates
 '''
 
-def sheets_upload(table_df, table_name):
+def sheets_upload(table_df, table_name, sheet_key):
 
     # Use creds to create a client to interact with the Google Sheets API
     scope = ['https://spreadsheets.google.com/feeds']
     creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
     client = gspread.authorize(creds)
-    spreadsheet = client.open_by_key('1BXwEN8bHFkYhmwdm6DbsXFtyGnMtNkkyPZoi9akX3fg')
+    spreadsheet = client.open_by_key(sheet_key)
     worksheet_titles = [worksheet.title for worksheet in spreadsheet] # Get worksheet titles
     # Check if worksheet exists
     worksheet_exists = table_name in worksheet_titles
